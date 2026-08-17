@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌌 AstroPulse AI — Space Weather Operations Intelligence
 
-## Getting Started
+**Challenge Theme:** Space Exploration  
+**Live Deployed Application:** [AstroPulse AI Dashboard](https://astropulse-ai.streamlit.app)  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📌 Problem Statement
+Solar flares and geomagnetic storms pose critical operational risks to modern infrastructure, causing radio blackouts, satellite orbit degradation, and ground power grid disturbances. Raw space weather telemetry from space agencies is often dense, fragmented, and difficult for non-specialist mission operators to rapidly interpret and act upon.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Solution Description
+**AstroPulse AI** bridges the gap between raw scientific space data and mission operations. It continuously ingests real-time solar flare (FLR) and geomagnetic activity from NASA's Space Weather Database Of Notifications, Knowledge, Information (DONKI) API, analyzes activity levels, and translates raw telemetry into actionable, plain-language operational summaries and risk indices.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧠 AI Approach & Architecture
+1. **Data Ingestion:** Fetches real-time space weather feeds from the NASA DONKI REST API (`/DONKI/FLR`).
+2. **Contextual Risk Assessment:** Evaluates solar flare classifications (C, M, X class) against orbital and ground threshold models.
+3. **Natural-Language Insight Engine:** Transforms structured physical metrics into human-readable alerts, highlighting affected systems (LEO satellites, HF radio bands, aviation routes) and recommended mitigations.
+4. **Operations Dashboard:** Built with a lightweight, high-performance UI providing real-time KPI metrics and raw telemetry inspection.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ How IBM Bob Was Used
+IBM Bob served as the core development and architectural acceleration tool:
+* **Scaffolding & Architecture:** Bob generated the baseline data contracts, ingestion pipelines, and interactive UI structure.
+* **API Integration Logic:** Bob assisted in formulating the NASA DONKI telemetry parser and resilient fallback logic for continuous availability during API rate limits.
+* **Operational Prompts & Logic:** Bob helped design the automated AI assessment logic mapping technical solar indices into operational risk tiers.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💻 Local Setup & Execution
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/honeyjaiman13-tech/astropulse-ai.git](https://github.com/honeyjaiman13-tech/astropulse-ai.git)
+   cd astropulse-ai
